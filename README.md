@@ -13,14 +13,15 @@ Architecture: Designed for Rocky Linux 9 (x86_64) and Ubuntu (latest LTS).
 On your target server, install Git and Git LFS, then clone the repository:
 
 # For Rocky Linux
-sudo dnf install git git-lfs -y
+      sudo dnf install git git-lfs -y
 
 # For Ubuntu
-sudo apt update && sudo apt install git git-lfs -y
+      sudo apt update && sudo apt install git git-lfs -y
 
 # Clone (Use your PAT as the password)
 git clone https://github.com/SlateIntegrations-git/SLATE-TAK-Server-Install.git
-cd SLATE-TAK-Server-Install
+
+      cd SLATE-TAK-Server-Install
 
 
 
@@ -30,18 +31,20 @@ cd SLATE-TAK-Server-Install
 The script must be executed with root privileges to configure system limits and install dependencies:
 
 
-chmod +x SLATE-Install-TAK.sh
-sudo ./SLATE-Install-TAK.sh
+      chmod +x SLATE-Install-TAK.sh
+      sudo ./SLATE-Install-TAK.sh
 
 
-🛠️ What the Script Does
+# 🛠️ What the Script Does
+
 Dependency Management: Automatically installs wget, java-17-openjdk, and gnupg.
 
 Database Setup: Configures the official PostgreSQL repositories and prepares the system for the TAK database.
 
 System Optimization: Increases system nofile limits to 32768 to handle high-volume TAK traffic.
 
-Security:
+
+# Security:
 
       Rocky Linux: Automatically installs checkpolicy and applies required SELinux modules for TAK Server.
 
@@ -50,7 +53,8 @@ Security:
 LFS Handling: Includes a prepare_lfs function to ensure large binaries are fully pulled from GitHub rather than remaining as small pointer files.
 
 
-📂 Repository Structure
+
+# 📂 Repository Structure
 
 
 SLATE-Install-TAK.sh: The universal installation script.
@@ -64,7 +68,7 @@ takserver-public-gpg.key: Public GPG key for package verification.
 
 
 
-⚠️ Troubleshooting
+# ⚠️ Troubleshooting
 
 
 Authentication Failed: Ensure you are using a Personal Access Token instead of your GitHub password.
