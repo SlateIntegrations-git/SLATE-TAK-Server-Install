@@ -22,7 +22,11 @@ sudo apt update && sudo apt install git git-lfs -y
 git clone https://github.com/SlateIntegrations-git/SLATE-TAK-Server-Install.git
 cd SLATE-TAK-Server-Install
 
+
+
 2. Run the Installer
+
+
 The script must be executed with root privileges to configure system limits and install dependencies:
 
 
