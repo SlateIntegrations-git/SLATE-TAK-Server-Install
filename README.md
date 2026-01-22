@@ -19,9 +19,9 @@ On your target server, install Git and Git LFS, then clone the repository:
       sudo apt update && sudo apt install git git-lfs -y
 
 # Clone (Use your PAT as the password)
-git clone https://github.com/SlateIntegrations-git/SLATE-TAK-Server-Install.git
 
-      cd SLATE-TAK-Server-Install
+
+      sudo git clone https://github.com/SlateIntegrations-git/SLATE-TAK-Server-Install.git && cd SLATE-TAK-Server-Install
 
 
 
@@ -31,7 +31,7 @@ git clone https://github.com/SlateIntegrations-git/SLATE-TAK-Server-Install.git
 The script must be executed with root privileges to configure system limits and install dependencies:
 
 
-      chmod +x SLATE-Install-TAK.sh
+      sudo chmod +x SLATE-Install-TAK.sh
       sudo ./SLATE-Install-TAK.sh
 
 
